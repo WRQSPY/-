@@ -1,4 +1,5 @@
-1.静态变量：
+一、
+静态变量：
 类变量也称为静态变量，在类中以static关键字声明，但必须在方法构造方法和语句块之外。
 无论一个类创建了多少个对象，类只拥有类变量的一份拷贝。
 静态变量除了被声明为常量外很少使用。常量是指声明为public/private，final和static类型的变量。常量初始化后不可改变。
@@ -9,7 +10,8 @@
 静态变量可以通过：ClassName.VariableName的方式访问。
 类变量被声明为public static final类型时，类变量名称必须使用大写字母。如果静态变量不是public和final类型，其命名方式与实例变量以及局部变量的命名方式一致。
 
-2.private 主要用来隐藏类的实现细节和保护类的数据。
+二、
+private 主要用来隐藏类的实现细节和保护类的数据。
 public class Logger {
    private String format;
    public String getFormat() {
@@ -20,3 +22,9 @@ public class Logger {
    }
 }
 Logger类中的format变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个public方法：getFormat() （返回format的值）和setFormat(String)（设置format的值）
+
+三、
+被声明为protected的变量、方法和构造器能被同一个包中的任何其他类访问，也能够被不同包中的子类访问。
+父类中声明为public的方法在子类中也必须为public。
+父类中声明为protected的方法在子类中要么声明为protected，要么声明为public。不能声明为private。
+父类中声明为private的方法，不能够被继承。
