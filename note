@@ -28,3 +28,31 @@ Logger类中的format变量为私有变量，所以其他类不能直接得到�
 父类中声明为public的方法在子类中也必须为public。
 父类中声明为protected的方法在子类中要么声明为protected，要么声明为public。不能声明为private。
 父类中声明为private的方法，不能够被继承。
+
+四、
+final修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。
+Static关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。
+一个类不能同时被abstract和final修饰。
+
+五、
+variable x = (expression) ? value if true : value if false
+eg：b = (a == 1) ? 20: 30;
+
+( Object reference variable ) instanceOf  (class/interface type)
+如果运算符左侧变量所指的对象，是操作符右侧类或接口(class/interface)的一个对象，那么结果为真。布尔类型的
+
+六、
+Java增强for循环，主要用于数组
+for(声明语句 : 表达式)
+{
+   //代码句子
+}
+eg：int [] numbers = {10, 20, 30, 40, 50};
+
+      for(int x : numbers ){
+         System.out.print( x );
+         System.out.print(",");
+      }
+      
+七、Number类
+所有的包装类（Integer、Long、Byte、Double、Float、Short）都是抽象类Number的子类。
