@@ -1,0 +1,17 @@
+web.xml其实就是servlet的一个配置文件,通过他来寻找对应的servlet 
+
+借用楼上的代码
+<servlet> 
+      <servlet-name>MyServlet </servlet-name>      //这里是servlet 的名字，自己定义 的 
+      <servlet-class>Servlet </servlet-class>      //这里是servlet的位置 。 如果在 一个包下， 就写 包名.类名 
+</servlet> 
+
+<servlet-mapping> 
+      <servlet-name>MyServlet </servlet-name>      //这里跟 上面的；servlet-name 必须一样 
+      <url-pattern>/abc</url-pattern>            //这里 在地址 输入访问的 时候 输入的，自己定义 
+</servlet-mapping>
+
+你在JSP上的form 中的action="abc"
+
+然后服务器会根据abc查找servlet-mapping中的url-pattern来对应servlet-name为(MyServlet) 
+再根据MyServlet 名查找xml中的servlet节低那下的servlet-class
