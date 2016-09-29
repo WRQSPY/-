@@ -1,0 +1,15 @@
+在.servlet中有：
+// 跳转到 message.jsp
+getServletContext().getRequestDispatcher("/message.jsp").forward(
+                request, response);
+                
+（之前有向request中添加属性 request.setAttribute("message","文件上传成功!");）
+
+在message.jsp中可以接收到：
+<html>
+<body>
+  <center>
+        <h2>${message}</h2>
+    </center>
+</body>
+</html>
